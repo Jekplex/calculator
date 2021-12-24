@@ -84,3 +84,7 @@ body{
 .clear {
   background-color:pink;
 }
+
+input {
+  pointer-events:none
+}
