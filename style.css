@@ -1,0 +1,86 @@
+html, body{
+  padding: 0;
+  margin: 0;
+}
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  display: flex;
+  min-height: 95vh;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #373737;
+}
+
+#cal-container {
+  display:grid;
+  width:fit-content;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px;
+  grid-template-areas: 
+    "display display display display"
+    "clear divide multipy subtract"
+    "7 8 9 add"
+    "4 5 6 add"
+    "1 2 3 equals"
+    "zero zero dot equals";
+  gap: 5px 6px;
+  /* background-color: rgb(220, 220, 0); */
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%); 
+  padding:10px;
+
+  border: 1px solid #BFBFBF;
+  box-shadow: 1px 1px 5px #aaaaaa;
+  
+}
+
+#cal-display-value {
+  grid-area: display;
+  font-size: 24px;
+  text-align:right;
+}
+
+.cal-btn {
+  border-radius: 25px;
+  background-color:#787276;
+  font-size: 18px;
+
+  
+  
+}
+
+.silver {
+  background: rgb(120,114,118);
+  background: linear-gradient(90deg, rgba(120,114,118,1) 0%, rgba(191,191,191,1) 50%, rgba(170,170,170,1) 100%);
+}
+
+.operation  {
+  background-color: orangered;
+}
+
+.add {
+  grid-area: add;
+}
+
+.equals {
+  grid-area: equals;
+  background-color:green;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.dot {
+  grid-area: dot;
+}
+
+.clear {
+  background-color:pink;
+}
