@@ -141,31 +141,31 @@ function setupCalOperationButtons() {
 
 const displayValueObj = document.querySelector("#cal-display-value");
 
-// ==========
-// https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input?rq=1
-// Restricts input for the given textbox to the given inputFilter function.
-function setInputFilter(textbox, inputFilter) 
-{
-  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) 
-  {
-    textbox.addEventListener(event, function() {
-      if (inputFilter(this.value)) {
-        this.oldValue = this.value;
-        this.oldSelectionStart = this.selectionStart;
-        this.oldSelectionEnd = this.selectionEnd;
-      } else if (this.hasOwnProperty("oldValue")) {
-        this.value = this.oldValue;
-        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-      } else {
-        this.value = "";
-      }
-    });
-  });
-}
-setInputFilter(displayValueObj, function(value) {
-return /^\d*\.?\d*$/.test(value); // Allow digits and '.' only, using a RegExp
-});
-// ==========
+// // ==========
+// // https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input?rq=1
+// // Restricts input for the given textbox to the given inputFilter function.
+// function setInputFilter(textbox, inputFilter) 
+// {
+//   ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) 
+//   {
+//     textbox.addEventListener(event, function() {
+//       if (inputFilter(this.value)) {
+//         this.oldValue = this.value;
+//         this.oldSelectionStart = this.selectionStart;
+//         this.oldSelectionEnd = this.selectionEnd;
+//       } else if (this.hasOwnProperty("oldValue")) {
+//         this.value = this.oldValue;
+//         this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+//       } else {
+//         this.value = "";
+//       }
+//     });
+//   });
+// }
+// setInputFilter(displayValueObj, function(value) {
+// return /^\d*\.?\d*$/.test(value); // Allow digits and '.' only, using a RegExp
+// });
+// // ==========
 
 function updateDisplayValue(newValue) {
   displayValue = newValue;
