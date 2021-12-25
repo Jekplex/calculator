@@ -6,14 +6,10 @@ html{
   height: 100%;
 }
 body{
-  min-height: 100%;
   display: flex;
-  min-height: 95vh;
+  min-height: 90vh;
   justify-content: center;
-  align-content: center;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
   background-color: #373737;
 }
 
@@ -30,7 +26,6 @@ body{
     "1 2 3 equals"
     "zero zero dot equals";
   gap: 5px 6px;
-  /* background-color: rgb(220, 220, 0); */
   background: rgb(2,0,36);
   background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(0,212,255,1) 100%); 
   padding:10px;
@@ -51,17 +46,19 @@ body{
   background-color:#787276;
   font-size: 18px;
 
-  
-  
 }
 
 .silver {
   background: rgb(120,114,118);
   background: linear-gradient(90deg, rgba(120,114,118,1) 0%, rgba(191,191,191,1) 50%, rgba(170,170,170,1) 100%);
+
+  /* background-color: #9dc5c3;
+  background-image: linear-gradient(315deg, #9dc5c3 0%, #5e5c5c 74%); */
 }
 
 .operation  {
-  background-color: orangered;
+  background-color: #99201c;
+  background-image: linear-gradient(316deg, #99201c 0%, #f56545 74%);
 }
 
 .add {
@@ -70,7 +67,7 @@ body{
 
 .equals {
   grid-area: equals;
-  background-color:green;
+  background:linear-gradient(45deg, #074C00, #42A341);
 }
 
 .zero {
@@ -82,7 +79,9 @@ body{
 }
 
 .clear {
-  background-color:pink;
+  background-color: #861657;
+  background-image: linear-gradient(326deg, #861657 0%, #ffa69e 74%);
+
 }
 
 input {
