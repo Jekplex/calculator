@@ -118,6 +118,8 @@ function setupCalOperationButtons() {
       btn.addEventListener("click", (e) => {
         if (prevNum1 == 0 && prevNum2 == 0 && prevNum3 == 0) {
           prevNum1 = parseFloat(displayValue)
+        } else if (prevNum1 != 0 && prevNum3 == 0 && displayValue == "") {
+          // do nothing
         } else if (prevNum1 != 0 && prevNum3 == 0) {
           prevNum2 = parseFloat(displayValue)
           prevNum3 = operate(currentOperation, prevNum1, prevNum2);
